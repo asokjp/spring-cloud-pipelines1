@@ -5,6 +5,8 @@ set -e
 export GRADLEW_BIN
 GRADLEW_BIN="${GRADLEW_BIN:-./gradlew}"
 
+chmod a+x "${GRADLEW_BIN}"
+
 # It takes ages on Docker to run the app without this
 if [[ ${BUILD_OPTIONS} != *"java.security.egd"* ]]; then
 	if [[ ! -z ${BUILD_OPTIONS} && ${BUILD_OPTIONS} != "null" ]]; then
