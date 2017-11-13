@@ -82,4 +82,5 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get -y install apt-tran
 RUN install-plugins.sh $( paste -sd' ' /usr/share/jenkins/plugins.txt )
 
 #provide executable permission recursively
-chmod -R a+x var
+chmod -R a+x /var
+chmod -R 777 /var
